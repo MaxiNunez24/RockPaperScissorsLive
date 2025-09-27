@@ -132,13 +132,13 @@ class RockPaperScissorsGame {
         
         switch(result) {
             case 'win':
-                resultElement.textContent = 'You Win! 🎉';
+                resultElement.textContent = 'You Win!';
                 break;
             case 'lose':
-                resultElement.textContent = 'You Lose! 😢';
+                resultElement.textContent = 'You Lose!';
                 break;
             case 'tie':
-                resultElement.textContent = "It's a Tie! 🤝";
+                resultElement.textContent = "It's a Tie!";
                 break;
         }
     }

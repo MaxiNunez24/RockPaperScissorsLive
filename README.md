@@ -31,3 +31,6 @@ A real-time rock-paper-scissors game using webcam hand gesture recognition and e
 ## Live Demo
 
 Simply open `index.html` in any modern web browser that supports camera access.
+
+## Built using Amazon Q 
+![Amazon Q CLI chat screenshot](./screenshots/Amazon_Q_CLI_chat.png)
