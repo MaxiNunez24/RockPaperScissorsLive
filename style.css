@@ -98,10 +98,10 @@ h1 {
 }
 
 .result-display {
-    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-size: clamp(2rem, 6vw, 3.5rem);
     font-weight: bold;
     margin: clamp(15px, 3vw, 25px) 0;
-    min-height: clamp(50px, 8vw, 80px);
+    min-height: clamp(70px, 12vw, 120px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -129,15 +129,15 @@ h1 {
 }
 
 .emotion-message {
-    font-size: clamp(1.1rem, 3vw, 1.6rem);
+    font-size: clamp(0.9rem, 2.5vw, 1.3rem);
     font-weight: bold;
     color: #ffeb3b;
-    margin-top: clamp(15px, 3vw, 25px);
-    min-height: clamp(35px, 6vw, 50px);
+    margin: clamp(15px, 3vw, 25px) 0;
+    min-height: clamp(30px, 5vw, 40px);
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
     background: rgba(255,235,59,0.1);
     border-radius: 10px;
-    padding: clamp(10px, 2vw, 15px);
+    padding: clamp(8px, 1.5vw, 12px);
     backdrop-filter: blur(10px);
     border: 2px solid rgba(255,235,59,0.3);
     display: flex;
