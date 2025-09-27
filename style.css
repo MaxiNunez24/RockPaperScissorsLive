@@ -1,0 +1,195 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: clamp(10px, 3vw, 20px);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    margin-bottom: clamp(20px, 4vw, 30px);
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.4);
+    font-weight: bold;
+}
+
+.game-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(15px, 3vw, 25px);
+}
+
+.video-container {
+    position: relative;
+    display: inline-block;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+#video {
+    width: 100%;
+    max-width: 640px;
+    height: auto;
+    aspect-ratio: 4/3;
+    border: 4px solid rgba(255,255,255,0.8);
+    border-radius: 15px;
+    transform: scaleX(-1);
+}
+
+#canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scaleX(-1);
+}
+
+.game-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.scores {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(15px, 4vw, 30px);
+    margin-bottom: clamp(20px, 4vw, 30px);
+    flex-wrap: wrap;
+}
+
+.score-card {
+    background: rgba(255,255,255,0.15);
+    border-radius: 15px;
+    padding: clamp(15px, 3vw, 20px);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.2);
+    min-width: clamp(80px, 15vw, 120px);
+}
+
+.score-label {
+    font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.score-value {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight: bold;
+    color: #ffeb3b;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.vs {
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    font-weight: bold;
+    color: #ff9800;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.result-display {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-weight: bold;
+    margin: clamp(15px, 3vw, 25px) 0;
+    min-height: clamp(50px, 8vw, 80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.2);
+}
+
+.choices {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(10px, 2vw, 15px);
+    margin-bottom: clamp(15px, 3vw, 20px);
+}
+
+.choice-display {
+    font-size: clamp(1rem, 3vw, 1.4rem);
+    padding: clamp(10px, 2vw, 15px);
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+    font-weight: 500;
+}
+
+.emotion-message {
+    font-size: clamp(1.1rem, 3vw, 1.6rem);
+    font-weight: bold;
+    color: #ffeb3b;
+    margin-top: clamp(15px, 3vw, 25px);
+    min-height: clamp(35px, 6vw, 50px);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    background: rgba(255,235,59,0.1);
+    border-radius: 10px;
+    padding: clamp(10px, 2vw, 15px);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,235,59,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.win { 
+    color: #4caf50; 
+    background: rgba(76,175,80,0.2);
+    border-color: rgba(76,175,80,0.4);
+}
+
+.lose { 
+    color: #f44336; 
+    background: rgba(244,67,54,0.2);
+    border-color: rgba(244,67,54,0.4);
+}
+
+.tie { 
+    color: #ff9800; 
+    background: rgba(255,152,0,0.2);
+    border-color: rgba(255,152,0,0.4);
+}
+
+@media (min-width: 768px) {
+    .game-area {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    
+    .video-container {
+        flex: 0 0 auto;
+    }
+    
+    #video {
+        width: 480px;
+        height: 360px;
+    }
+    
+    .game-info {
+        text-align: left;
+        padding-left: clamp(20px, 4vw, 40px);
+    }
+    
+    .choices {
+        flex-direction: row;
+        gap: clamp(15px, 3vw, 20px);
+    }
+    
+    .choice-display {
+        flex: 1;
+    }
+}

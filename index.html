@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors with Emotion Detection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎮 Rock Paper Scissors 🎮</h1>
+        <div class="game-area">
+            <div class="video-container">
+                <video id="video" autoplay muted></video>
+                <canvas id="canvas"></canvas>
+            </div>
+            <div class="game-info">
+                <div class="scores">
+                    <div class="score-card player">
+                        <div class="score-label">👤 Player</div>
+                        <div class="score-value" id="playerScore">0</div>
+                    </div>
+                    <div class="vs">VS</div>
+                    <div class="score-card computer">
+                        <div class="score-label">🤖 Computer</div>
+                        <div class="score-value" id="computerScore">0</div>
+                    </div>
+                </div>
+                <div id="result" class="result-display"></div>
+                <div class="choices">
+                    <div id="playerChoice" class="choice-display">✋ Show your hand!</div>
+                    <div id="computerChoice" class="choice-display"></div>
+                </div>
+                <div id="emotionMessage" class="emotion-message"></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@vladmandic/face-api/dist/face-api.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
